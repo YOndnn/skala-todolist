@@ -4,7 +4,7 @@ const todoInput = document.querySelector('#todoinput');
 const todoList = document.querySelector('#todolist');
 
 // 폼이 제출될 때 실행된다.
-todoForm.addEventListener('submit', function(event) {
+todoForm.addEventListener("submit", function(event) {
     // form 태그는 기본적으로 제출 시 화면을 새로고침한다.
     // TodoList에서는 새로고침이 필요 없으므로 기본 동작을 막는다.
     event.preventDefault();
@@ -12,8 +12,8 @@ todoForm.addEventListener('submit', function(event) {
     const todoText = todoInput.value.trim();
 
     // 입력값이 비어 있으면 경고창을 보여 주고 함수를 종료한다.
-    if (todoText === '') {
-        alert('할 일을 입력하세요.');
+    if (todoText === " ") {
+        alert("할 일을 입력하세요.");
         todoInput.focus();
         return;
     }
@@ -22,10 +22,7 @@ todoForm.addEventListener('submit', function(event) {
     addTodo(todoText);
 
     //입력창을 비운다.
-    todoInput.value = '';
-
-    //입력창을 비운다.
-    todoInput.focus();
+    todoInput.value = " ";
 
     //다시 입력할 수 있도록 입력창에 커서를 둔다.
     todoInput.focus();
@@ -35,7 +32,7 @@ todoForm.addEventListener('submit', function(event) {
 function addTodo(todoText) {
     // li 태그를 만든다.
     const todoItem = document.createElement('li');
-    todoItem.className = 'todo-item';
+    todoItem.className = "todo-item";
 
     // 할 일 내용이 들어갈 span 태그를 만든다.
     const todoTextSpan = document.createElement("span");
@@ -45,8 +42,8 @@ function addTodo(todoText) {
     todoTextSpan.textContent = todoText;
 
     // 버튼을 담을 div 태그를 만든다.
-    const actionBox = document.createElement('div');
-    actionBox.className = 'todo-actions';
+    const actionBox = document.createElement("div");
+    actionBox.className = "todo-actions";
 
     //완료 버튼을 만든다.
     const doneButton = document.createElement("button");

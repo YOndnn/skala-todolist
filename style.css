@@ -1,5 +1,5 @@
 /* 모든 요소의 크기 계산 방식을 통일한다 */
-*{
+* {
     box-sizing: border-box;
 }
 
@@ -7,7 +7,7 @@ body {
     margin: 0;
     font-family: 'Courier New', Courier, monospace;
     background-color: azure;
-    color: silver;
+    color: #222;
 }
 
 /* 전체 앱 영역 */
@@ -16,7 +16,7 @@ body {
     max-width: 600px;
     margin: 60px auto;
     padding: 24px;
-    background-color: aliceblue;
+    background-color: rgb(233, 237, 241);
     border-radius: 16px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
@@ -28,7 +28,7 @@ h1 {
 
 .description {
     text-align: center;
-    color: gray;
+    color: #666;
 }
 
 /* 입력 폼 */
@@ -85,7 +85,7 @@ h1 {
 
 /* 완료된 할 일 */
 .todo-item.done span {
-    color: gray;
+    color: #999;
     text-decoration: line-through;
 }
 
@@ -107,6 +107,6 @@ h1 {
 }
 
 .delete-button {
-    background-color: #ef4444;
     color: white;
+    background-color: #ef4444;
 }
