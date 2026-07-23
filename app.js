@@ -1,7 +1,7 @@
 // HTML 요소 가져오기
-const todoForm = document.querySelector('#todoform');
-const todoInput = document.querySelector('#todoinput');
-const todoList = document.querySelector('#todolist');
+const todoForm = document.querySelector('#todoForm');
+const todoInput = document.querySelector('#todoInput');
+const todoList = document.querySelector('#todoList');
 
 // 폼이 제출될 때 실행된다.
 todoForm.addEventListener("submit", function(event) {
@@ -12,7 +12,7 @@ todoForm.addEventListener("submit", function(event) {
     const todoText = todoInput.value.trim();
 
     // 입력값이 비어 있으면 경고창을 보여 주고 함수를 종료한다.
-    if (todoText === " ") {
+    if (todoText === "") {
         alert("할 일을 입력하세요.");
         todoInput.focus();
         return;
@@ -22,7 +22,7 @@ todoForm.addEventListener("submit", function(event) {
     addTodo(todoText);
 
     //입력창을 비운다.
-    todoInput.value = " ";
+    todoInput.value = "";
 
     //다시 입력할 수 있도록 입력창에 커서를 둔다.
     todoInput.focus();
